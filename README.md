@@ -2,7 +2,7 @@
 
 [Conan.io](https://conan.io) package for [Boost.Flyweight](https://github.com/Boostorg/Flyweight) project
 
-The packages generated with this **conanfile** can be found in [Bintray](https://bintray.com/bincrafters/conan-public/Boost.Flyweight%3Abincrafters).
+The packages generated with this **conanfile** can be found in [Bintray](https://bintray.com/bincrafters/public-conan/Boost.Flyweight%3Abincrafters).
 
 ## For Users: Use this package
 
