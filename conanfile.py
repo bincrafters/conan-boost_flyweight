@@ -8,7 +8,8 @@ class BoostFlyweightConan(ConanFile):
     name = "boost_flyweight"
     version = "1.66.0"
     url = "https://github.com/bincrafters/conan-boost_flyweight"
-
+    author = "Bincrafters <bincrafters@gmail.com>"
+    exports = ["LICENSE.md"]
     lib_short_names = ["flyweight"]
     is_header_only = True
 
