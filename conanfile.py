@@ -6,8 +6,7 @@ from conans import ConanFile, tools
 
 class BoostFlyweightConan(ConanFile):
     name = "boost_flyweight"
-    version = "1.66.0"
-    url = "https://github.com/bincrafters/conan-boost_flyweight"
+    version = "1.67.0"
     author = "Bincrafters <bincrafters@gmail.com>"
     exports = ["LICENSE.md"]
     lib_short_names = ["flyweight"]
@@ -16,30 +15,32 @@ class BoostFlyweightConan(ConanFile):
     def package_id_additional(self):
         self.info.header_only()
 
+    # TODO: functional
     requires = (
-        "boost_package_tools/1.66.0@bincrafters/testing",
-        "boost_assert/1.66.0@bincrafters/testing",
-        "boost_config/1.66.0@bincrafters/testing",
-        "boost_core/1.66.0@bincrafters/testing",
-        "boost_detail/1.66.0@bincrafters/testing",
-        "boost_functional/1.66.0@bincrafters/testing",
-        "boost_interprocess/1.66.0@bincrafters/testing",
-        "boost_mpl/1.66.0@bincrafters/testing",
-        "boost_multi_index/1.66.0@bincrafters/testing",
-        "boost_parameter/1.66.0@bincrafters/testing",
-        "boost_preprocessor/1.66.0@bincrafters/testing",
-        "boost_serialization/1.66.0@bincrafters/testing",
-        "boost_smart_ptr/1.66.0@bincrafters/testing",
-        "boost_throw_exception/1.66.0@bincrafters/testing",
-        "boost_type_traits/1.66.0@bincrafters/testing"
+        "boost_assert/1.67.0@bincrafters/testing",
+        "boost_config/1.67.0@bincrafters/testing",
+        "boost_container_hash/1.67.0@bincrafters/testing",
+        "boost_core/1.67.0@bincrafters/testing",
+        "boost_detail/1.67.0@bincrafters/testing",
+        "boost_interprocess/1.67.0@bincrafters/testing",
+        "boost_mpl/1.67.0@bincrafters/testing",
+        "boost_multi_index/1.67.0@bincrafters/testing",
+        "boost_package_tools/1.67.0@bincrafters/testing",
+        "boost_parameter/1.67.0@bincrafters/testing",
+        "boost_preprocessor/1.67.0@bincrafters/testing",
+        "boost_serialization/1.67.0@bincrafters/testing",
+        "boost_smart_ptr/1.67.0@bincrafters/testing",
+        "boost_throw_exception/1.67.0@bincrafters/testing",
+        "boost_type_traits/1.67.0@bincrafters/testing"
     )
 
     # BEGIN
 
-    description = "Please visit http://www.boost.org/doc/libs/1_66_0"
+    url = "https://github.com/bincrafters/conan-boost_flyweight"
+    description = "Please visit http://www.boost.org/doc/libs/1_67_0"
     license = "BSL-1.0"
     short_paths = True
-    build_requires = "boost_generator/1.66.0@bincrafters/testing"
+    build_requires = "boost_generator/1.67.0@bincrafters/testing"
 
     def package_id(self):
         getattr(self, "package_id_additional", lambda:None)()
@@ -67,7 +68,5 @@ class BoostFlyweightConan(ConanFile):
             import boost_package_tools  # pylint: disable=F0401
             boost_package_tools.package_info(self)
         getattr(self, "package_info_additional", lambda:None)()
-
-
 
     # END
