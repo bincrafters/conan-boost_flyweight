@@ -8,6 +8,7 @@ base = python_requires("boost_base/1.69.0@bincrafters/stable")
 
 class BoostFlyweightConan(base.BoostBaseConan):
     name = "boost_flyweight"
+    version = "1.69.0"
     url = "https://github.com/bincrafters/conan-boost_flyweight"
     lib_short_names = ["flyweight"]
     header_only_libs = ["flyweight"]
