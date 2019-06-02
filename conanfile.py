@@ -4,27 +4,9 @@
 from conans import python_requires
 
 
-base = python_requires("boost_base/1.69.0@bincrafters/testing")
+base = python_requires("boost_base/2.0.0@bincrafters/testing")
+
 
 class BoostFlyweightConan(base.BoostBaseConan):
     name = "boost_flyweight"
-    version = "1.69.0"
-    url = "https://github.com/bincrafters/conan-boost_flyweight"
-    lib_short_names = ["flyweight"]
-    header_only_libs = ["flyweight"]
-    b2_requires = [
-        "boost_assert",
-        "boost_config",
-        "boost_container_hash",
-        "boost_core",
-        "boost_detail",
-        "boost_interprocess",
-        "boost_mpl",
-        "boost_multi_index",
-        "boost_parameter",
-        "boost_preprocessor",
-        "boost_serialization",
-        "boost_smart_ptr",
-        "boost_throw_exception",
-        "boost_type_traits"
-    ]
+    version = "1.70.0"
